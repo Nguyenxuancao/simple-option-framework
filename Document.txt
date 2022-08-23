@@ -1,0 +1,23 @@
+// Doc
+sof_get_all_fields_from_section('sof-demo-fields', 'meta', 'post', 292);  => lấy tất cả các fields nằm trong 1 section và trong Post Hoặc Page có id cụ thể
+
+sof_get_all_fields_from_section('sof-demo-fields', 'meta', 'post', $post->ID);  => lấy tất cả các fields nằm trong 1 section và trong Post Hoặc Page
+
+sof_get_all_fields_from_section('sof-demo-fields', 'meta', 'post', get_queried_object()->ID);  => lấy tất cả các fields nằm trong 1 section Với ID của đối tượng hiện đang được truy vấn.
+
+sof_get_field_from_section('sof-demo-fields', 'demo-fields', 'custom');  => dùng để lấy 1 field nằm trong 1 section. custom là cho WIDGET
+
+sof_get_field_from_section('sof-demo-fields', 'demo-fields', 'options');  => dùng để lấy 1 field nằm trong 1 section. OPTIONs là ADMIN
+
+sof_get_field_from_section('sof-demo-fields', 'demo-fields', 'options', 'taxonomy', 5); => dùng để lấy 1 field nằm trong 1 section. OPTIONs là taxonomy và id
+
+sof_get_field_from_section('sof-demo-fields', 'demo-fields', 'options', 'taxonomy', get_queried_object()->term_taxonomy_id);
+
+=========== giải thích ====================
+
+"sof_get_all_fields_from_section" => dùng để lấy tất cả các fields nằm trong 1 section.
+
+"sof_get_field_from_section" => dùng để lấy 1 field nằm trong 1 section.
+
+'sof-demo-fields' => là section.
+'demo-fields'  => là field cụ thể đã tạo.
